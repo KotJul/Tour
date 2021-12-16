@@ -33,7 +33,7 @@ header{
 .social ul li{
   margin-right: 18px;
 }
-
+/*форма поиска*/
 .seach{
   width: 200px;
   
@@ -81,6 +81,8 @@ header{
   top: 400px;
   text-align: center;
 }
+
+
 .banner-menu{
   width: 200px;
  position: absolute;
@@ -114,6 +116,7 @@ header{
 .main-title{
   width: 800px;
   margin: 50px auto 5px auto;
+  cursor: pointer;
 }
 .main-title h1{
   font-size: 70px;
@@ -124,15 +127,18 @@ header{
 .main-slogan{
   width: 800px;
   margin: 0px auto;
+  cursor: pointer;
 }
 .main-slogan p{
   text-align: center;
   color: #6d7975;
   font-style: italic;
 }
+/*первая секция Лучшие предложения*/
 .section-first{
   width: 90%;
   margin: 90px auto;
+  cursor: pointer;
 }
 .filter-list{
   margin-top: 15px;
@@ -167,10 +173,10 @@ margin-right: 20px;
   position: absolute;
   top: 20px;
   right: 20px;
-  
+  cursor: pointer;
 }
 .tag-list .tag {
-  background: rgb(255,255,255,0.15);
+  background: rgba(0, 0, 0, .2);
   border-radius: 8px;
   padding: 5px 10px;
   font-weight: 700;
@@ -196,46 +202,123 @@ margin-right: 20px;
   object-fit: cover;
   border-radius: 5px;
   }
+.info{
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  width: auto;
+  bottom: 48px;
+  left: 40px;
+  right: 40px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, .2);
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+.info-title{
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.info-text{
+  font-size: 16px;
+  line-height: 18px;
+}
+.info-data{
+  font-size: 16px;
+  line-height: 15px;
+  margin-top: 15px;
+}
+
+/*слайдер*/
+
+.banner-container{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+.banner-img-list,
+.banner-img{
+  width: 100%;
+  height: 100%;
+}
+.banner-img{
+  display: none;
+}
+.banner-img img{
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+#radio1:checked ~ .banner-img-list .banner1,
+#radio2:checked ~ .banner-img-list .banner2,
+#radio3:checked ~ .banner-img-list .banner3,
+#radio4:checked ~ .banner-img-list .banner4{
+  display: block !important;
+}
+input[name="banner"]{
+  display: none;
+}
+/*4 точки выбора внизу на слайдере*/
+.label-menu {
+  width:100%;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  text-align: center;
+}
+.label-menu label{
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  
+  display: inline-block;
+  background: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all .3s;
+}
+.label-menu label:hover,
+.label-menu label:focus
+{
+  background: blue;
+  transition: all .3s;
+}
+  
+/*вторая секция Экстрим*/
 
 .section-second,
 .main-column {
   position: relative;
   width: 100%;
-  height: 340px;
-  margin-top: 40px;
-  padding: 35px;
-  display: flex;
+  height: 580px;
   justify-content: space-between;
+  top: 20px;
 }
-
-.section-second-container{
-  width: 1700px;
-  margin: 0 auto;
-  position: relative;
-}
-  
 .main-extreme-image img{
   position: absolute;
-  top: 20px;
-  left: 150px;
-  bottom: 40px;
-  width: 500px;
-  height: 300px;
+  width: 600px;
+  height: 100%;
+  object-fit: cover;
+  right: 0px;
 }
 .main-extreme{
   display: flex;
-  margin-right: 70px;
+  cursor: pointer;
 }
 .main-extreme h2 {
   position: absolute;
-  right: 150px;
-  top: 10px;
+   left: 130px;
+  top: 130px;
 }
-.main-extreme-text{
+.main-extreme-text p{
   position: absolute;
-  right: 150px;
-  top: 40px;
-}
+  right: 130px;
+  top: 170px;
+}/*
 .main-extreme-text p,
 .main-about-text p{
   font-family: 'Baloo Bhaijaan 2';
@@ -260,13 +343,14 @@ margin-right: 20px;
  font-weight: bold;
 }
 .main-extreme-text .button a:hover,
-.main-about-text .button2 a{
+.main-about-text .button2 a:hover{
   color: black;
   font-weight: bold;
-}
+}*/
 .main-about {
   display: flex;
   margin-left: 70px;
+  cursor: pointer;
 }
 .main-about-image img{
   position: absolute;
@@ -292,3 +376,11 @@ margin-right: 20px;
   left: 150px;
 }
 
+
+.line{
+  border-bottom: 1px solid #cfcfd8;
+  width: 100%;
+}
+.section-second-container{
+  width: 100%;
+}
