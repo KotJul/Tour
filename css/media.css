@@ -1,0 +1,13 @@
+@media screen and (max-width:1300px){
+    .banner-img img{
+        min-width: none;
+    }
+    .footer{
+        width: 97%;
+    }
+    .footer-container {
+        width: 96%;
+        padding: 40px 0px;
+        margin: 15px;
+    }
+}
